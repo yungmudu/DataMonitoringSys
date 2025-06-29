@@ -1,0 +1,431 @@
+@page "/data-entry"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Identity
+@inject IDataPointService DataPointService
+@inject IEngineeringUnitService UnitService
+@inject IJSRuntime JSRuntime
+@inject UserManager<ApplicationUser> UserManager
+@attribute [Authorize]
+@implements IDisposable
+
+<PageTitle>Data Entry - Engineering Dashboard</PageTitle>
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900">Data Entry</h1>
+    <p class="mt-2 text-gray-600">Enter new engineering measurements and data points</p>
+</div>
+
+<!-- Data Entry Form -->
+<div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-xl font-semibold text-gray-900 mb-6">Add New Data Point</h2>
+    
+    <EditForm Model="newDataPoint" OnValidSubmit="HandleValidSubmit" FormName="DataEntryForm">
+        <DataAnnotationsValidator />
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Engineering Unit Selection -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Engineering Unit</label>
+                <InputSelect @bind-Value="newDataPoint.EngineeringUnitId" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">Select Engineering Unit</option>
+                    @if (engineeringUnits != null)
+                    {
+                        @foreach (var unit in engineeringUnits)
+                        {
+                            <option value="@unit.Id">@unit.Name (@unit.Code)</option>
+                        }
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => newDataPoint.EngineeringUnitId" class="text-red-500 text-sm mt-1" />
+            </div>
+
+            <!-- Parameter Name -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Parameter Name</label>
+                <InputText @bind-Value="newDataPoint.ParameterName" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="e.g., Temperature, Pressure, Flow Rate" />
+                <ValidationMessage For="() => newDataPoint.ParameterName" class="text-red-500 text-sm mt-1" />
+            </div>
+
+            <!-- Value -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Value</label>
+                <InputNumber @bind-Value="newDataPoint.Value" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" step="0.01" />
+                <ValidationMessage For="() => newDataPoint.Value" class="text-red-500 text-sm mt-1" />
+            </div>
+
+            <!-- Unit -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Unit</label>
+                <InputText @bind-Value="newDataPoint.Unit" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="e.g., °C, PSI, L/min" />
+                <ValidationMessage For="() => newDataPoint.Unit" class="text-red-500 text-sm mt-1" />
+            </div>
+
+            <!-- Min Value (Optional) -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Minimum Value (Optional)</label>
+                <InputNumber @bind-Value="newDataPoint.MinValue" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" step="0.01" />
+                <ValidationMessage For="() => newDataPoint.MinValue" class="text-red-500 text-sm mt-1" />
+            </div>
+
+            <!-- Max Value (Optional) -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Maximum Value (Optional)</label>
+                <InputNumber @bind-Value="newDataPoint.MaxValue" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" step="0.01" />
+                <ValidationMessage For="() => newDataPoint.MaxValue" class="text-red-500 text-sm mt-1" />
+            </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="mt-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Notes (Optional)</label>
+            <InputTextArea @bind-Value="newDataPoint.Notes" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="3" placeholder="Additional notes or comments..." />
+            <ValidationMessage For="() => newDataPoint.Notes" class="text-red-500 text-sm mt-1" />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6 flex justify-end space-x-4">
+            <button type="button" @onclick="ResetForm" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Reset
+            </button>
+            <button type="button" @onclick="TestSave" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                Save Data
+            </button>
+            <button type="submit" disabled="@isSubmitting" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50">
+                @if (isSubmitting)
+                {
+                    <span class="flex items-center">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Saving...
+                    </span>
+                }
+                else
+                {
+                    <span>Save Data Point</span>
+                }
+            </button>
+        </div>
+    </EditForm>
+</div>
+
+<!-- Success/Error Messages -->
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+        <div class="flex">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            @successMessage
+        </div>
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+        <div class="flex">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+            </svg>
+            @errorMessage
+        </div>
+    </div>
+}
+
+<!-- Quick Entry Templates -->
+<div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Entry Templates</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <button @onclick="LoadTemperatureTemplate" class="p-4 border border-gray-300 rounded-md hover:bg-gray-50 text-left">
+            <h3 class="font-medium text-gray-900">Temperature</h3>
+            <p class="text-sm text-gray-500">&deg;C, &deg;F, K</p>
+        </button>
+        <button @onclick="LoadPressureTemplate" class="p-4 border border-gray-300 rounded-md hover:bg-gray-50 text-left">
+            <h3 class="font-medium text-gray-900">Pressure</h3>
+            <p class="text-sm text-gray-500">PSI, Bar, Pa</p>
+        </button>
+        <button @onclick="LoadFlowRateTemplate" class="p-4 border border-gray-300 rounded-md hover:bg-gray-50 text-left">
+            <h3 class="font-medium text-gray-900">Flow Rate</h3>
+            <p class="text-sm text-gray-500">L/min, m&sup3;/h, GPM</p>
+        </button>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private DataPoint newDataPoint = new()
+    {
+        ParameterName = "",
+        Value = 0,
+        Unit = "",
+        MinValue = null,
+        MaxValue = null,
+        Notes = ""
+    };
+    private IEnumerable<EngineeringUnit>? engineeringUnits;
+    private bool isSubmitting = false;
+    private string successMessage = string.Empty;
+    private string errorMessage = string.Empty;
+    private Timer? messageTimer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Console.WriteLine("=== OnInitializedAsync called ===");
+            Console.WriteLine($"Initial newDataPoint values:");
+            Console.WriteLine($"ParameterName: '{newDataPoint.ParameterName}'");
+            Console.WriteLine($"Value: {newDataPoint.Value}");
+            Console.WriteLine($"Unit: '{newDataPoint.Unit}'");
+            Console.WriteLine($"MinValue: {newDataPoint.MinValue}");
+            Console.WriteLine($"MaxValue: {newDataPoint.MaxValue}");
+            Console.WriteLine($"Notes: '{newDataPoint.Notes}'");
+
+            engineeringUnits = await UnitService.GetActiveUnitsAsync();
+            ResetForm();
+
+            Console.WriteLine($"After ResetForm values:");
+            Console.WriteLine($"ParameterName: '{newDataPoint.ParameterName}'");
+            Console.WriteLine($"Value: {newDataPoint.Value}");
+            Console.WriteLine($"Unit: '{newDataPoint.Unit}'");
+            Console.WriteLine($"MinValue: {newDataPoint.MinValue}");
+            Console.WriteLine($"MaxValue: {newDataPoint.MaxValue}");
+            Console.WriteLine($"Notes: '{newDataPoint.Notes}'");
+        }
+        catch (Exception)
+        {
+            errorMessage = "Error loading engineering units. Please refresh the page.";
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        isSubmitting = true;
+        successMessage = string.Empty;
+        errorMessage = string.Empty;
+        StateHasChanged();
+
+        try
+        {
+            Console.WriteLine("=== HandleValidSubmit called ===");
+
+            // Get current user ID
+            string userId = null;
+
+            if (AuthenticationStateTask != null)
+            {
+                var authState = await AuthenticationStateTask;
+                userId = authState.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                Console.WriteLine($"User ID from AuthState: {userId}");
+                Console.WriteLine($"User authenticated: {authState.User.Identity?.IsAuthenticated}");
+            }
+            else
+            {
+                Console.WriteLine("AuthenticationStateTask is null, trying alternative method...");
+            }
+
+            // If still no user ID, try to get admin user from database
+            if (string.IsNullOrEmpty(userId))
+            {
+                Console.WriteLine("Getting admin user from database...");
+                var adminUser = await UserManager.FindByEmailAsync("admin@engineering.com");
+                if (adminUser != null)
+                {
+                    userId = adminUser.Id;
+                    Console.WriteLine($"Using admin user ID: {userId}");
+                }
+            }
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                errorMessage = "User not authenticated.";
+                Console.WriteLine("ERROR: User ID is null or empty");
+                StateHasChanged();
+                return;
+            }
+
+            // Validate required fields
+            if (string.IsNullOrEmpty(newDataPoint.ParameterName))
+            {
+                errorMessage = "Parameter Name is required.";
+                Console.WriteLine("ERROR: Parameter Name is empty");
+                StateHasChanged();
+                return;
+            }
+
+            if (newDataPoint.EngineeringUnitId <= 0)
+            {
+                errorMessage = "Engineering Unit must be selected.";
+                Console.WriteLine("ERROR: Engineering Unit not selected");
+                StateHasChanged();
+                return;
+            }
+
+            newDataPoint.UserId = userId;
+            newDataPoint.Timestamp = DateTime.UtcNow;
+
+            Console.WriteLine($"=== Attempting to save data point ===");
+            Console.WriteLine($"Parameter: {newDataPoint.ParameterName}");
+            Console.WriteLine($"Value: {newDataPoint.Value}");
+            Console.WriteLine($"Unit: {newDataPoint.Unit}");
+            Console.WriteLine($"Engineering Unit ID: {newDataPoint.EngineeringUnitId}");
+            Console.WriteLine($"User ID: {newDataPoint.UserId}");
+            Console.WriteLine($"Min Value: {newDataPoint.MinValue}");
+            Console.WriteLine($"Max Value: {newDataPoint.MaxValue}");
+            Console.WriteLine($"Notes: {newDataPoint.Notes}");
+
+            var createdDataPoint = await DataPointService.CreateDataPointAsync(newDataPoint);
+
+            Console.WriteLine($"=== Data point created successfully ===");
+            Console.WriteLine($"Created ID: {createdDataPoint.Id}");
+            Console.WriteLine($"Is Valid: {createdDataPoint.IsValid}");
+            Console.WriteLine($"Validation Message: {createdDataPoint.ValidationMessage}");
+
+            if (!createdDataPoint.IsValid)
+            {
+                errorMessage = $"Data point saved but validation failed: {createdDataPoint.ValidationMessage}";
+            }
+            else
+            {
+                successMessage = "✅ Data point saved successfully!";
+
+                // Auto-hide success message after 5 seconds
+                messageTimer?.Dispose();
+                messageTimer = new Timer(async _ =>
+                {
+                    successMessage = string.Empty;
+                    await InvokeAsync(StateHasChanged);
+                }, null, TimeSpan.FromSeconds(5), Timeout.InfiniteTimeSpan);
+            }
+
+            StateHasChanged();
+            await Task.Delay(100);
+
+            ResetForm();
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"=== ERROR in HandleValidSubmit ===");
+            Console.WriteLine($"Exception Type: {ex.GetType().Name}");
+            Console.WriteLine($"Message: {ex.Message}");
+            Console.WriteLine($"Stack Trace: {ex.StackTrace}");
+            if (ex.InnerException != null)
+            {
+                Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+            }
+            errorMessage = $"❌ Error saving data point: {ex.Message}";
+            StateHasChanged();
+        }
+        finally
+        {
+            isSubmitting = false;
+            StateHasChanged();
+        }
+    }
+
+    private void ResetForm()
+    {
+        Console.WriteLine("=== ResetForm called ===");
+        Console.WriteLine($"Before reset - ParameterName: '{newDataPoint.ParameterName}', Value: {newDataPoint.Value}");
+
+        newDataPoint = new DataPoint
+        {
+            Timestamp = DateTime.UtcNow
+        };
+
+        Console.WriteLine($"After reset - ParameterName: '{newDataPoint.ParameterName}', Value: {newDataPoint.Value}");
+        Console.WriteLine($"After reset - Unit: '{newDataPoint.Unit}', MinValue: {newDataPoint.MinValue}, MaxValue: {newDataPoint.MaxValue}");
+        Console.WriteLine($"After reset - Notes: '{newDataPoint.Notes}'");
+
+        successMessage = string.Empty;
+        errorMessage = string.Empty;
+    }
+
+    private async Task TestSave()
+    {
+        if (isSubmitting)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Already submitting, please wait...");
+            return; // Prevent multiple clicks
+        }
+
+        await JSRuntime.InvokeVoidAsync("alert", "Saving your entered data! Check console for details.");
+
+        // Clear any existing messages
+        successMessage = string.Empty;
+        errorMessage = string.Empty;
+
+        // Don't overwrite user data - use whatever they entered in the form
+        // Just validate that required fields are filled
+        if (string.IsNullOrWhiteSpace(newDataPoint.ParameterName))
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Please enter a Parameter Name!");
+            return;
+        }
+
+        if (newDataPoint.Value == 0)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Please enter a Value!");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(newDataPoint.Unit))
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Please enter a Unit!");
+            return;
+        }
+
+        if (newDataPoint.EngineeringUnitId == 0)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Please select an Engineering Unit!");
+            return;
+        }
+
+        StateHasChanged();
+
+        try
+        {
+            await HandleValidSubmit();
+            await JSRuntime.InvokeVoidAsync("alert", "Data saved successfully!");
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Error in TestSave: {ex.Message}");
+        }
+    }
+
+    private void LoadTemperatureTemplate()
+    {
+        newDataPoint.ParameterName = "Temperature";
+        newDataPoint.Unit = "°C";
+        newDataPoint.MinValue = -50;
+        newDataPoint.MaxValue = 200;
+    }
+
+    private void LoadPressureTemplate()
+    {
+        newDataPoint.ParameterName = "Pressure";
+        newDataPoint.Unit = "PSI";
+        newDataPoint.MinValue = 0;
+        newDataPoint.MaxValue = 1000;
+    }
+
+    private void LoadFlowRateTemplate()
+    {
+        newDataPoint.ParameterName = "Flow Rate";
+        newDataPoint.Unit = "L/min";
+        newDataPoint.MinValue = 0;
+        newDataPoint.MaxValue = 500;
+    }
+
+    public void Dispose()
+    {
+        messageTimer?.Dispose();
+    }
+}

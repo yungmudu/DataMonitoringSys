@@ -1,0 +1,234 @@
+@page "/Account/Register"
+@page "/Identity/Account/Register"
+@using Microsoft.AspNetCore.Identity
+@using DataMonitoringSys.Models
+@using DataMonitoringSys.Services
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject IEngineeringUnitService UnitService
+@inject NavigationManager Navigation
+
+<PageTitle>Register - Engineering Dashboard</PageTitle>
+
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
+    <div class="max-w-md w-full space-y-8 p-8">
+        <div class="text-center">
+            <div class="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-blue-500">
+                <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                </svg>
+            </div>
+            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+                Create your account
+            </h2>
+            <p class="mt-2 text-sm text-gray-600">
+                Join the Engineering Dashboard
+            </p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <span class="block sm:inline">@errorMessage</span>
+            </div>
+        }
+
+        <EditForm Model="registerModel" OnValidSubmit="HandleRegister" FormName="RegisterForm" class="mt-8 space-y-6">
+            <DataAnnotationsValidator />
+            
+            <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                        <InputText @bind-Value="registerModel.FirstName" id="firstName" 
+                                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                                   placeholder="First name" />
+                        <ValidationMessage For="@(() => registerModel.FirstName)" class="text-red-600 text-sm mt-1" />
+                    </div>
+                    
+                    <div>
+                        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <InputText @bind-Value="registerModel.LastName" id="lastName" 
+                                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                                   placeholder="Last name" />
+                        <ValidationMessage For="@(() => registerModel.LastName)" class="text-red-600 text-sm mt-1" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <InputText @bind-Value="registerModel.Email" type="email" id="email" 
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Enter your email" />
+                    <ValidationMessage For="@(() => registerModel.Email)" class="text-red-600 text-sm mt-1" />
+                </div>
+
+                <div>
+                    <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+                    <InputText @bind-Value="registerModel.Department" id="department" 
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Your department" />
+                    <ValidationMessage For="@(() => registerModel.Department)" class="text-red-600 text-sm mt-1" />
+                </div>
+
+                <div>
+                    <label for="jobTitle" class="block text-sm font-medium text-gray-700">Job Title</label>
+                    <InputText @bind-Value="registerModel.JobTitle" id="jobTitle" 
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Your job title" />
+                    <ValidationMessage For="@(() => registerModel.JobTitle)" class="text-red-600 text-sm mt-1" />
+                </div>
+
+                <div>
+                    <label for="engineeringUnit" class="block text-sm font-medium text-gray-700">Engineering Unit</label>
+                    <InputSelect @bind-Value="registerModel.EngineeringUnitId" id="engineeringUnit" 
+                                 class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <option value="">Select Engineering Unit</option>
+                        @if (engineeringUnits != null)
+                        {
+                            @foreach (var unit in engineeringUnits)
+                            {
+                                <option value="@unit.Id">@unit.Name</option>
+                            }
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => registerModel.EngineeringUnitId)" class="text-red-600 text-sm mt-1" />
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <InputText @bind-Value="registerModel.Password" type="password" id="password" 
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Enter your password" />
+                    <ValidationMessage For="@(() => registerModel.Password)" class="text-red-600 text-sm mt-1" />
+                </div>
+
+                <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <InputText @bind-Value="registerModel.ConfirmPassword" type="password" id="confirmPassword" 
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" 
+                               placeholder="Confirm your password" />
+                    <ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="text-red-600 text-sm mt-1" />
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" disabled="@isLoading" 
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50">
+                    @if (isLoading)
+                    {
+                        <span>Creating account...</span>
+                    }
+                    else
+                    {
+                        <span>Create account</span>
+                    }
+                </button>
+            </div>
+
+            <div class="text-center">
+                <p class="text-sm text-gray-600">
+                    Already have an account?
+                    <a href="/Account/Login" class="font-medium text-blue-600 hover:text-blue-500">
+                        Sign in here
+                    </a>
+                </p>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private RegisterModel registerModel { get; set; } = new();
+
+    private string? errorMessage;
+    private bool isLoading = false;
+    private IEnumerable<EngineeringUnit>? engineeringUnits;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            engineeringUnits = await UnitService.GetAllUnitsAsync();
+        }
+        catch (Exception)
+        {
+            // Handle error - in production, you'd want proper logging
+        }
+    }
+
+    public class RegisterModel
+    {
+        [Required]
+        public string FirstName { get; set; } = "";
+
+        [Required]
+        public string LastName { get; set; } = "";
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = "";
+
+        [Required]
+        public string Department { get; set; } = "";
+
+        [Required]
+        public string JobTitle { get; set; } = "";
+
+        [Required]
+        public int EngineeringUnitId { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        public string Password { get; set; } = "";
+
+        [Required]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; } = "";
+    }
+
+    private async Task HandleRegister()
+    {
+        isLoading = true;
+        errorMessage = null;
+
+        try
+        {
+            var user = new ApplicationUser
+            {
+                UserName = registerModel.Email,
+                Email = registerModel.Email,
+                FirstName = registerModel.FirstName,
+                LastName = registerModel.LastName,
+                Department = registerModel.Department,
+                JobTitle = registerModel.JobTitle,
+                EngineeringUnitId = registerModel.EngineeringUnitId,
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            var result = await UserManager.CreateAsync(user, registerModel.Password);
+
+            if (result.Succeeded)
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false);
+                Navigation.NavigateTo("/", forceLoad: true);
+            }
+            else
+            {
+                errorMessage = string.Join(", ", result.Errors.Select(e => e.Description));
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred during registration: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

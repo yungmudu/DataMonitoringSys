@@ -1,0 +1,722 @@
+@page "/data-management"
+@rendermode InteractiveServer
+@inject IDataPointService DataPointService
+@inject IEngineeringUnitService UnitService
+@inject IJSRuntime JSRuntime
+@attribute [Authorize]
+
+<PageTitle>Data Management - Engineering Dashboard</PageTitle>
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900">Data Management</h1>
+    <p class="mt-2 text-gray-600">Filter, search, and export engineering data</p>
+</div>
+
+<!-- Filters and Search -->
+<div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Filters & Search</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4">
+        <!-- Engineering Unit Filter -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Engineering Unit</label>
+            <select @bind="selectedUnitId" @bind:after="ApplyFilters" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All Units</option>
+                @if (engineeringUnits != null)
+                {
+                    @foreach (var unit in engineeringUnits)
+                    {
+                        <option value="@unit.Id">@unit.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <!-- Parameter Filter -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Parameter</label>
+            <select @bind="selectedParameter" @bind:after="ApplyFilters" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All Parameters</option>
+                @if (parameterNames != null)
+                {
+                    @foreach (var param in parameterNames)
+                    {
+                        <option value="@param">@param</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <!-- Start Date -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Start Date</label>
+            <input type="date" @bind="startDate" @bind:after="ApplyFilters" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- End Date -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">End Date</label>
+            <input type="date" @bind="endDate" @bind:after="ApplyFilters" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Validation Status -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+            <select @bind="validationFilter" @bind:after="ApplyFilters" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All</option>
+                <option value="valid">Valid Only</option>
+                <option value="invalid">Invalid Only</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Search and Actions -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex-1 max-w-md">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Search</label>
+            <input type="text" @bind="searchTerm" @onkeyup="OnSearchKeyUp" placeholder="Search in notes, parameter names..." 
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        
+        <div class="flex space-x-2">
+            <button @onclick="ResetFilters" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Reset Filters
+            </button>
+            <button @onclick="RefreshData" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Refresh
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Export Options -->
+<div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Export Data</h2>
+    <div class="flex flex-wrap gap-4">
+        <button @onclick="ExportToCsv" disabled="@isExporting" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:opacity-50">
+            @if (isExporting && exportType == "csv")
+            {
+                <span class="flex items-center">
+                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Exporting...
+                </span>
+            }
+            else
+            {
+                <span>Export to CSV</span>
+            }
+        </button>
+        
+        <button @onclick="ExportToExcel" disabled="@isExporting" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50">
+            @if (isExporting && exportType == "excel")
+            {
+                <span class="flex items-center">
+                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Exporting...
+                </span>
+            }
+            else
+            {
+                <span>Export to Excel</span>
+            }
+        </button>
+        
+        <div class="text-sm text-gray-600 flex items-center">
+            <span>@filteredDataPoints?.Count() ?? 0 records will be exported</span>
+        </div>
+    </div>
+</div>
+
+<!-- Data Table -->
+<div class="bg-white rounded-lg shadow overflow-hidden">
+    <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+        <h2 class="text-lg font-semibold text-gray-900">Data Points (@(filteredDataPoints?.Count() ?? 0) records)</h2>
+        <div class="text-sm text-gray-600">
+            Showing @Math.Min(currentPage * pageSize, filteredDataPoints?.Count() ?? 0) of @(filteredDataPoints?.Count() ?? 0) records
+        </div>
+    </div>
+    
+    @if (isLoading)
+    {
+        <div class="p-8 text-center">
+            <div class="loading-spinner"></div>
+            <p class="text-gray-600 mt-4">Loading data...</p>
+        </div>
+    }
+    else if (paginatedDataPoints?.Any() == true)
+    {
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" @onclick="() => SortBy(nameof(DataPoint.Id))">
+                            ID @GetSortIcon(nameof(DataPoint.Id))
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" @onclick="() => SortBy(nameof(DataPoint.ParameterName))">
+                            Parameter @GetSortIcon(nameof(DataPoint.ParameterName))
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" @onclick="() => SortBy(nameof(DataPoint.Value))">
+                            Value @GetSortIcon(nameof(DataPoint.Value))
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unit</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Engineering Unit</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer" @onclick="() => SortBy(nameof(DataPoint.Timestamp))">
+                            Timestamp @GetSortIcon(nameof(DataPoint.Timestamp))
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    @foreach (var dataPoint in paginatedDataPoints)
+                    {
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.Id</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">@dataPoint.ParameterName</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.Value.ToString("F2")</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.Unit</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.EngineeringUnit?.Name</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.Timestamp.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">@dataPoint.User?.FullName</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                @if (dataPoint.IsValid)
+                                {
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Valid</span>
+                                }
+                                else
+                                {
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800" title="@dataPoint.ValidationMessage">Invalid</span>
+                                }
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <button @onclick="async () => await ViewDetails(dataPoint)" class="text-blue-600 hover:text-blue-900 mr-3">View</button>
+                                <button @onclick="() => ConfirmDeleteDataPoint(dataPoint.Id)" class="text-red-600 hover:text-red-900">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <label class="text-sm text-gray-700">Rows per page:</label>
+                <select @bind="pageSize" @bind:after="OnPageSizeChanged" class="border border-gray-300 rounded px-2 py-1 text-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <button @onclick="PreviousPage" disabled="@(currentPage <= 1)" 
+                        class="px-3 py-1 border border-gray-300 rounded text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50">
+                    Previous
+                </button>
+                
+                <span class="text-sm text-gray-700">
+                    Page @currentPage of @totalPages
+                </span>
+                
+                <button @onclick="NextPage" disabled="@(currentPage >= totalPages)" 
+                        class="px-3 py-1 border border-gray-300 rounded text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50">
+                    Next
+                </button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="p-8 text-center text-gray-500">
+            <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <h3 class="mt-2 text-sm font-medium text-gray-900">No data points found</h3>
+            <p class="mt-1 text-sm text-gray-500">Try adjusting your filters or add some data points.</p>
+        </div>
+    }
+</div>
+
+<!-- View Details Modal -->
+@if (showDetailsModal && selectedDataPoint != null)
+{
+    <div class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50" @onclick="async () => await CloseDetailsModal()">
+        <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white" @onclick:stopPropagation="true">
+            <div class="mt-3">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-gray-900">Data Point Details</h3>
+                    <button @onclick="async () => await CloseDetailsModal()" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Parameter Name</label>
+                        <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.ParameterName</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Value</label>
+                        <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.Value @selectedDataPoint.Unit</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Engineering Unit</label>
+                        <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.EngineeringUnit?.Name</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Timestamp</label>
+                        <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">User</label>
+                        <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.User?.FirstName @selectedDataPoint.User?.LastName</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Status</label>
+                        <p class="mt-1 text-sm">
+                            @if (selectedDataPoint.IsValid)
+                            {
+                                <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Valid</span>
+                            }
+                            else
+                            {
+                                <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">Invalid</span>
+                            }
+                        </p>
+                    </div>
+                    @if (selectedDataPoint.MinValue.HasValue || selectedDataPoint.MaxValue.HasValue)
+                    {
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Range</label>
+                            <p class="mt-1 text-sm text-gray-900">
+                                @(selectedDataPoint.MinValue?.ToString() ?? "N/A") - @(selectedDataPoint.MaxValue?.ToString() ?? "N/A") @selectedDataPoint.Unit
+                            </p>
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(selectedDataPoint.Notes))
+                    {
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700">Notes</label>
+                            <p class="mt-1 text-sm text-gray-900">@selectedDataPoint.Notes</p>
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(selectedDataPoint.ValidationMessage))
+                    {
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700">Validation Message</label>
+                            <p class="mt-1 text-sm text-red-600">@selectedDataPoint.ValidationMessage</p>
+                        </div>
+                    }
+                </div>
+
+                <div class="mt-6 flex justify-end">
+                    <button @onclick="async () => await CloseDetailsModal()" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Delete Confirmation Modal -->
+@if (showDeleteConfirmation)
+{
+    <div class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                    <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mt-2">Delete Data Point</h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500">
+                        Are you sure you want to delete this data point? This action cannot be undone.
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <button @onclick="CancelDelete" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">
+                        Cancel
+                    </button>
+                    <button @onclick="ConfirmDelete" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private IEnumerable<EngineeringUnit>? engineeringUnits;
+    private IEnumerable<string>? parameterNames;
+    private IEnumerable<DataPoint>? allDataPoints;
+    private IEnumerable<DataPoint>? filteredDataPoints;
+    private IEnumerable<DataPoint>? paginatedDataPoints;
+    
+    // Filter properties
+    private string? selectedUnitId;
+    private string? selectedParameter;
+    private DateTime? startDate;
+    private DateTime? endDate;
+    private string? validationFilter;
+    private string searchTerm = string.Empty;
+    
+    // Pagination
+    private int currentPage = 1;
+    private int pageSize = 25;
+    private int totalPages = 1;
+
+    // Modal and confirmation states
+    private bool showDetailsModal = false;
+    private bool showDeleteConfirmation = false;
+    private DataPoint? selectedDataPoint = null;
+    private int dataPointToDelete = 0;
+
+    // Sorting
+    private string sortColumn = nameof(DataPoint.Timestamp);
+    private bool sortAscending = false;
+    
+    // State
+    private bool isLoading = true;
+    private bool isExporting = false;
+    private string exportType = string.Empty;
+    
+    // Search debounce
+    private Timer? searchTimer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            engineeringUnits = await UnitService.GetActiveUnitsAsync();
+            parameterNames = await DataPointService.GetParameterNamesAsync();
+            
+            // Set default date range (last 30 days)
+            endDate = DateTime.Today;
+            startDate = DateTime.Today.AddDays(-30);
+            
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data management page: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task LoadData()
+    {
+        try
+        {
+            isLoading = true;
+            int? unitId = string.IsNullOrEmpty(selectedUnitId) ? null : int.Parse(selectedUnitId);
+            allDataPoints = await DataPointService.GetDataPointsAsync(unitId, startDate, endDate, selectedParameter);
+            ApplyClientSideFilters();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void ApplyClientSideFilters()
+    {
+        if (allDataPoints == null)
+        {
+            filteredDataPoints = Enumerable.Empty<DataPoint>();
+            return;
+        }
+
+        var query = allDataPoints.AsQueryable();
+
+        // Apply validation filter
+        if (!string.IsNullOrEmpty(validationFilter))
+        {
+            if (validationFilter == "valid")
+                query = query.Where(dp => dp.IsValid);
+            else if (validationFilter == "invalid")
+                query = query.Where(dp => !dp.IsValid);
+        }
+
+        // Apply search filter
+        if (!string.IsNullOrEmpty(searchTerm))
+        {
+            var searchLower = searchTerm.ToLower();
+            query = query.Where(dp =>
+                dp.ParameterName.ToLower().Contains(searchLower) ||
+                (dp.Notes != null && dp.Notes.ToLower().Contains(searchLower)) ||
+                dp.Unit.ToLower().Contains(searchLower) ||
+                (dp.EngineeringUnit != null && dp.EngineeringUnit.Name != null && dp.EngineeringUnit.Name.ToLower().Contains(searchLower))
+            );
+        }
+
+        // Apply sorting
+        query = sortColumn switch
+        {
+            nameof(DataPoint.Id) => sortAscending ? query.OrderBy(dp => dp.Id) : query.OrderByDescending(dp => dp.Id),
+            nameof(DataPoint.ParameterName) => sortAscending ? query.OrderBy(dp => dp.ParameterName) : query.OrderByDescending(dp => dp.ParameterName),
+            nameof(DataPoint.Value) => sortAscending ? query.OrderBy(dp => dp.Value) : query.OrderByDescending(dp => dp.Value),
+            nameof(DataPoint.Timestamp) => sortAscending ? query.OrderBy(dp => dp.Timestamp) : query.OrderByDescending(dp => dp.Timestamp),
+            _ => query.OrderByDescending(dp => dp.Timestamp)
+        };
+
+        filteredDataPoints = query.ToList();
+        
+        // Update pagination
+        totalPages = (int)Math.Ceiling((double)(filteredDataPoints?.Count() ?? 0) / pageSize);
+        currentPage = Math.Min(currentPage, Math.Max(1, totalPages));
+        
+        UpdatePaginatedData();
+    }
+
+    private void UpdatePaginatedData()
+    {
+        if (filteredDataPoints == null)
+        {
+            paginatedDataPoints = Enumerable.Empty<DataPoint>();
+            return;
+        }
+
+        paginatedDataPoints = filteredDataPoints
+            .Skip((currentPage - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+    }
+
+    private async Task ApplyFilters()
+    {
+        await LoadData();
+    }
+
+    private void OnSearchKeyUp()
+    {
+        searchTimer?.Dispose();
+        searchTimer = new Timer(async _ =>
+        {
+            await InvokeAsync(() =>
+            {
+                ApplyClientSideFilters();
+                StateHasChanged();
+            });
+        }, null, 300, Timeout.Infinite);
+    }
+
+    private void ResetFilters()
+    {
+        selectedUnitId = null;
+        selectedParameter = null;
+        startDate = DateTime.Today.AddDays(-30);
+        endDate = DateTime.Today;
+        validationFilter = null;
+        searchTerm = string.Empty;
+        currentPage = 1;
+        
+        InvokeAsync(LoadData);
+    }
+
+    private async Task RefreshData()
+    {
+        await LoadData();
+    }
+
+    private void SortBy(string column)
+    {
+        if (sortColumn == column)
+        {
+            sortAscending = !sortAscending;
+        }
+        else
+        {
+            sortColumn = column;
+            sortAscending = true;
+        }
+        
+        ApplyClientSideFilters();
+    }
+
+    private string GetSortIcon(string column)
+    {
+        if (sortColumn != column) return "";
+        return sortAscending ? "↑" : "↓";
+    }
+
+    private void PreviousPage()
+    {
+        if (currentPage > 1)
+        {
+            currentPage--;
+            UpdatePaginatedData();
+        }
+    }
+
+    private void NextPage()
+    {
+        if (currentPage < totalPages)
+        {
+            currentPage++;
+            UpdatePaginatedData();
+        }
+    }
+
+    private void OnPageSizeChanged()
+    {
+        currentPage = 1;
+        ApplyClientSideFilters();
+    }
+
+    private async Task ExportToCsv()
+    {
+        if (filteredDataPoints == null) return;
+        
+        try
+        {
+            isExporting = true;
+            exportType = "csv";
+            
+            var csvData = await DataPointService.ExportToCsvAsync(filteredDataPoints);
+            var fileName = $"engineering_data_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
+            
+            await JSRuntime.InvokeVoidAsync("downloadFile", fileName, "text/csv", Convert.ToBase64String(csvData));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error exporting to CSV: {ex.Message}");
+        }
+        finally
+        {
+            isExporting = false;
+            exportType = string.Empty;
+        }
+    }
+
+    private async Task ExportToExcel()
+    {
+        if (filteredDataPoints == null) return;
+        
+        try
+        {
+            isExporting = true;
+            exportType = "excel";
+            
+            var excelData = await DataPointService.ExportToExcelAsync(filteredDataPoints);
+            var fileName = $"engineering_data_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            
+            await JSRuntime.InvokeVoidAsync("downloadFile", fileName, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Convert.ToBase64String(excelData));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error exporting to Excel: {ex.Message}");
+        }
+        finally
+        {
+            isExporting = false;
+            exportType = string.Empty;
+        }
+    }
+
+    private async Task ViewDetails(DataPoint dataPoint)
+    {
+        try
+        {
+            Console.WriteLine($"=== ViewDetails called for data point {dataPoint.Id} ===");
+            await JSRuntime.InvokeVoidAsync("alert", $"View button clicked for data point {dataPoint.Id}!");
+            selectedDataPoint = dataPoint;
+            showDetailsModal = true;
+            Console.WriteLine($"Modal state set: showDetailsModal={showDetailsModal}, selectedDataPoint={selectedDataPoint?.Id}");
+            StateHasChanged();
+            await InvokeAsync(StateHasChanged);
+            Console.WriteLine("StateHasChanged called");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in ViewDetails: {ex.Message}");
+            await JSRuntime.InvokeVoidAsync("alert", $"Error opening details: {ex.Message}");
+        }
+    }
+
+    private async Task ConfirmDeleteDataPoint(int id)
+    {
+        dataPointToDelete = id;
+        showDeleteConfirmation = true;
+        StateHasChanged();
+    }
+
+    private async Task DeleteDataPoint(int id)
+    {
+        try
+        {
+            var success = await DataPointService.DeleteDataPointAsync(id);
+            if (success)
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Data point deleted successfully!");
+                await LoadData();
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Failed to delete data point!");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting data point: {ex.Message}");
+            await JSRuntime.InvokeVoidAsync("alert", $"Error deleting data point: {ex.Message}");
+        }
+        finally
+        {
+            showDeleteConfirmation = false;
+            dataPointToDelete = 0;
+            StateHasChanged();
+        }
+    }
+
+    private async Task CloseDetailsModal()
+    {
+        Console.WriteLine("=== CloseDetailsModal called ===");
+        showDetailsModal = false;
+        selectedDataPoint = null;
+        StateHasChanged();
+        await InvokeAsync(StateHasChanged);
+        Console.WriteLine("Modal closed");
+    }
+
+    private void CancelDelete()
+    {
+        showDeleteConfirmation = false;
+        dataPointToDelete = 0;
+        StateHasChanged();
+    }
+
+    private async Task ConfirmDelete()
+    {
+        if (dataPointToDelete > 0)
+        {
+            await DeleteDataPoint(dataPointToDelete);
+        }
+    }
+
+    public void Dispose()
+    {
+        searchTimer?.Dispose();
+    }
+}

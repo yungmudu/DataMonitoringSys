@@ -1,0 +1,528 @@
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\appsettings.Development.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\appsettings.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.staticwebassets.runtime.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.staticwebassets.endpoints.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.exe
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.deps.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.runtimeconfig.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.pdb
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ClosedXML.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ClosedXML.Parser.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\CsvHelper.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DocumentFormat.OpenXml.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DocumentFormat.OpenXml.Framework.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ExcelNumberFormat.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Humanizer.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Data.Sqlite.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Mono.TextTemplating.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\RBush.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SixLabors.Fonts.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.core.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.CodeDom.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Convention.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Hosting.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Runtime.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.IO.Packaging.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.csproj.AssemblyReference.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.AssemblyInfoInputs.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.AssemblyInfo.cs
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.csproj.CoreCompileInputs.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.MvcApplicationPartsAssemblyInfo.cs
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\bundle\DataMonitoringSys.styles.css
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\projectbundle\DataMonitoringSys.bundle.scp.css
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ofa40bqe71-b9sayid5wm.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j9swiz3yzq-90yqlj465b.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vltxs1u3vm-xtxxf3hu2r.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\14ipv7q33s-bqjiyaj88i.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\rh65p086id-c2jlpeoesf.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\eb27mqwgz2-erw9l3u2r3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9glsckmvxo-aexeepp0ev.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\hh8ihyobdx-d7shbmvgxk.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bww8ud00yd-ausgxo2sd3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\edcrak57d7-k8d9w2qqmf.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\sf8kf2lula-cosvhxvwiu.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3tzsqhslk9-ub07r2b239.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\oxk5o6czdw-fvhpjtyr6v.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\k8b25g0zwc-b7pk76d08c.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\8axix7wldr-fsbi9cje9m.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\d5z9sfpxbi-rzd6atqjts.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\u8428c4e9i-ee0r1s7dh0.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tg53r17ghy-dxx9fxp4il.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\nlrl0f3xs3-jd9uben2k1.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\1fc4q00scq-khv3u5hwcm.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\8xykfy6qmd-r4e9w2rdcm.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vsrbd71spn-lcd1t2u6c8.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cynp17w084-c2oey78nd0.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7o8oyvng68-tdbxkamptv.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\h9vwtoirpy-j5mq2jizvt.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\o5k23vqhrk-06098lyss8.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\iznc766avz-nvvlpmu67g.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ns4583i71s-s35ty4nyc5.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\47012z8l2l-pj5nd1wqec.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\4vzefxwp2m-46ein0sx1k.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bh4v3mdph9-v0zj4ognzu.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\l186vlgaag-37tfw0ft22.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\rsc7qacj1u-hrwsygsryq.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\z408qb6q7a-pk9g2wxc8p.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qfr28sqcy1-ft3s53vfgj.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\0k1i85ntyh-6cfz1n2cew.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\xa379ftczi-6pdc2jztkx.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lr5hmrr0j7-493y06b0oq.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ivy2s9gwh5-iovd86k7lj.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\higufxz8op-vr1egmr9el.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\s3tglgz8hr-kbrnm935zg.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vw9sls9bhj-jj8uyg4cgr.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ym8tkpcl2i-y7v9cxd14o.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\zzna4nrm5w-notf2xhcfb.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\igscs4x0yk-h1s4sie4z3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\zap00c0tb5-63fj8s7r0e.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\pogzkicjpz-0j3bgjxly4.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j3hwsq15kh-47otxtyo56.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\q3naettu8c-4v8eqarkd7.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ldxy2n3w6q-356vix0kms.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ypthv7q62w-83jwlth58m.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t6e3b82hrf-mrlpezrjn3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\uocis9wxbx-lzl9nlhx6b.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\2tikzqlmtu-ag7o75518u.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9muusbdg0a-x0q3zqp4vz.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tpsq5dibur-0i3buxo5is.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t0qo7o574p-o1o13a6vjx.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\b9lhb08218-ttgo8qnofa.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\a3ygkwa5zy-2z0ns9nrw6.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qd2rvsclsx-xzt8riartu.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\34s3f8xn6f-2lrsejpand.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7yxgztfx9m-bqjiyaj88i.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\eaqgvye8j1-c2jlpeoesf.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\h1wu725zi4-erw9l3u2r3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cg3jwq1bf0-aexeepp0ev.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7ioxgzcsen-d7shbmvgxk.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ixywzkkb5w-ausgxo2sd3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lambx64g6i-k8d9w2qqmf.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ruuuycfmbr-cosvhxvwiu.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qgc0uotyso-ub07r2b239.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\esqto4b4ga-fvhpjtyr6v.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\an7yrapyl2-b7pk76d08c.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t1m8zevjua-fsbi9cje9m.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vmd5ojg5fg-rzd6atqjts.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3jxcww2dfw-ee0r1s7dh0.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\x9xjhap3by-dxx9fxp4il.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\o4eln82j1y-jd9uben2k1.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\mb01kii25u-khv3u5hwcm.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\812s34e315-r4e9w2rdcm.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jouklpexd0-lcd1t2u6c8.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\gm4eazw8k1-c2oey78nd0.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\024jte295o-tdbxkamptv.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9jacq9vp2f-j5mq2jizvt.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bs8o7nkhvf-06098lyss8.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\4lfq0mg6b1-nvvlpmu67g.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t9khxqxjn3-s35ty4nyc5.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\66bjxl700d-pj5nd1wqec.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\dfqdk43ky1-46ein0sx1k.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\e8b0vb17yh-v0zj4ognzu.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\2z5vjbc3br-37tfw0ft22.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tbczkehb8x-hrwsygsryq.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lexv666aeu-pk9g2wxc8p.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jkdzz153j9-ft3s53vfgj.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\346ayuv1c8-6cfz1n2cew.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\093otnh1tf-6pdc2jztkx.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\d074w4y03z-493y06b0oq.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jspjo9hrff-iovd86k7lj.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\sghdk6ka90-vr1egmr9el.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\hz0c28xrom-kbrnm935zg.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3j38pnbtsn-jj8uyg4cgr.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\713kao810k-y7v9cxd14o.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\xbidb6lzjg-notf2xhcfb.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\867j2mx8kt-h1s4sie4z3.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j9714r7wg7-63fj8s7r0e.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\db7zxbwfe1-0j3bgjxly4.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cloui6gklk-p0te7vlq1c.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\x8m5h31b3u-p0te7vlq1c.gz
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.json.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.development.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMoni.EE1F00AC.Up2Date
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\refint\DataMonitoringSys.dll
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.pdb
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.genruntimeconfig.cache
+D:\DotNet\Blazor\Server\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\ref\DataMonitoringSys.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\appsettings.Development.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\appsettings.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.staticwebassets.runtime.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.staticwebassets.endpoints.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.exe
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.deps.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.runtimeconfig.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DataMonitoringSys.pdb
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ClosedXML.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ClosedXML.Parser.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\CsvHelper.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DocumentFormat.OpenXml.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\DocumentFormat.OpenXml.Framework.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ExcelNumberFormat.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Humanizer.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Data.Sqlite.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\RBush.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SixLabors.Fonts.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.core.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.CodeDom.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Convention.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Hosting.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.Runtime.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.Composition.TypedParts.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\System.IO.Packaging.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.csproj.AssemblyReference.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.AssemblyInfoInputs.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.AssemblyInfo.cs
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.csproj.CoreCompileInputs.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.MvcApplicationPartsAssemblyInfo.cs
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.MvcApplicationPartsAssemblyInfo.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\bundle\DataMonitoringSys.styles.css
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\scopedcss\projectbundle\DataMonitoringSys.bundle.scp.css
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ofa40bqe71-b9sayid5wm.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j9swiz3yzq-90yqlj465b.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vltxs1u3vm-xtxxf3hu2r.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\14ipv7q33s-bqjiyaj88i.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\rh65p086id-c2jlpeoesf.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\eb27mqwgz2-erw9l3u2r3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9glsckmvxo-aexeepp0ev.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\hh8ihyobdx-d7shbmvgxk.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bww8ud00yd-ausgxo2sd3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\edcrak57d7-k8d9w2qqmf.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\sf8kf2lula-cosvhxvwiu.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3tzsqhslk9-ub07r2b239.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\oxk5o6czdw-fvhpjtyr6v.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\k8b25g0zwc-b7pk76d08c.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\8axix7wldr-fsbi9cje9m.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\d5z9sfpxbi-rzd6atqjts.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\u8428c4e9i-ee0r1s7dh0.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tg53r17ghy-dxx9fxp4il.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\nlrl0f3xs3-jd9uben2k1.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\1fc4q00scq-khv3u5hwcm.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\8xykfy6qmd-r4e9w2rdcm.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vsrbd71spn-lcd1t2u6c8.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cynp17w084-c2oey78nd0.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7o8oyvng68-tdbxkamptv.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\h9vwtoirpy-j5mq2jizvt.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\o5k23vqhrk-06098lyss8.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\iznc766avz-nvvlpmu67g.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ns4583i71s-s35ty4nyc5.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\47012z8l2l-pj5nd1wqec.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\4vzefxwp2m-46ein0sx1k.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bh4v3mdph9-v0zj4ognzu.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\l186vlgaag-37tfw0ft22.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\rsc7qacj1u-hrwsygsryq.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\z408qb6q7a-pk9g2wxc8p.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qfr28sqcy1-ft3s53vfgj.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\0k1i85ntyh-6cfz1n2cew.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\xa379ftczi-6pdc2jztkx.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lr5hmrr0j7-493y06b0oq.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ivy2s9gwh5-iovd86k7lj.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\higufxz8op-vr1egmr9el.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\s3tglgz8hr-kbrnm935zg.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vw9sls9bhj-jj8uyg4cgr.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ym8tkpcl2i-y7v9cxd14o.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\zzna4nrm5w-notf2xhcfb.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\igscs4x0yk-h1s4sie4z3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\zap00c0tb5-63fj8s7r0e.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\pogzkicjpz-0j3bgjxly4.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j3hwsq15kh-47otxtyo56.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\q3naettu8c-4v8eqarkd7.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ldxy2n3w6q-356vix0kms.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ypthv7q62w-83jwlth58m.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t6e3b82hrf-mrlpezrjn3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\uocis9wxbx-lzl9nlhx6b.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\2tikzqlmtu-ag7o75518u.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9muusbdg0a-x0q3zqp4vz.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tpsq5dibur-0i3buxo5is.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t0qo7o574p-o1o13a6vjx.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\b9lhb08218-ttgo8qnofa.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\a3ygkwa5zy-2z0ns9nrw6.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qd2rvsclsx-xzt8riartu.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\34s3f8xn6f-2lrsejpand.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7yxgztfx9m-bqjiyaj88i.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\eaqgvye8j1-c2jlpeoesf.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\h1wu725zi4-erw9l3u2r3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cg3jwq1bf0-aexeepp0ev.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\7ioxgzcsen-d7shbmvgxk.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ixywzkkb5w-ausgxo2sd3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lambx64g6i-k8d9w2qqmf.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\ruuuycfmbr-cosvhxvwiu.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\qgc0uotyso-ub07r2b239.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\esqto4b4ga-fvhpjtyr6v.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\an7yrapyl2-b7pk76d08c.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t1m8zevjua-fsbi9cje9m.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\vmd5ojg5fg-rzd6atqjts.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3jxcww2dfw-ee0r1s7dh0.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\x9xjhap3by-dxx9fxp4il.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\o4eln82j1y-jd9uben2k1.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\mb01kii25u-khv3u5hwcm.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\812s34e315-r4e9w2rdcm.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jouklpexd0-lcd1t2u6c8.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\gm4eazw8k1-c2oey78nd0.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\024jte295o-tdbxkamptv.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\9jacq9vp2f-j5mq2jizvt.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\bs8o7nkhvf-06098lyss8.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\4lfq0mg6b1-nvvlpmu67g.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\t9khxqxjn3-s35ty4nyc5.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\66bjxl700d-pj5nd1wqec.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\dfqdk43ky1-46ein0sx1k.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\e8b0vb17yh-v0zj4ognzu.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\2z5vjbc3br-37tfw0ft22.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\tbczkehb8x-hrwsygsryq.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\lexv666aeu-pk9g2wxc8p.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jkdzz153j9-ft3s53vfgj.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\346ayuv1c8-6cfz1n2cew.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\093otnh1tf-6pdc2jztkx.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\d074w4y03z-493y06b0oq.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\jspjo9hrff-iovd86k7lj.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\sghdk6ka90-vr1egmr9el.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\hz0c28xrom-kbrnm935zg.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\3j38pnbtsn-jj8uyg4cgr.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\713kao810k-y7v9cxd14o.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\xbidb6lzjg-notf2xhcfb.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\867j2mx8kt-h1s4sie4z3.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\j9714r7wg7-63fj8s7r0e.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\db7zxbwfe1-0j3bgjxly4.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\cloui6gklk-p0te7vlq1c.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\compressed\x8m5h31b3u-p0te7vlq1c.gz
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.development.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMoni.EE1F00AC.Up2Date
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\refint\DataMonitoringSys.dll
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.pdb
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\DataMonitoringSys.genruntimeconfig.cache
+C:\Semester 10\DataMonitoringSys\DataMonitoringSys\DataMonitoringSys\obj\Debug\net9.0\ref\DataMonitoringSys.dll

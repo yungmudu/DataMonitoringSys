@@ -1,0 +1,96 @@
+﻿@inherits LayoutComponentBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using Microsoft.AspNetCore.Components.Authorization
+
+<div class="min-h-screen bg-gray-50">
+    @if (isAuthenticated == true)
+    {
+        <!-- Flex container for sidebar and main content -->
+        <div class="flex h-screen">
+            <!-- Navigation Sidebar -->
+            <NavMenu />
+
+            <!-- Main Content Area -->
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <!-- Top bar for authenticated users -->
+                <div class="bg-white shadow-sm border-b border-gray-200 flex-shrink-0">
+                    <div class="px-4 sm:px-6 lg:px-8">
+                        <div class="flex justify-between h-16">
+                            <div class="flex items-center">
+                                <h1 class="text-xl font-semibold text-gray-900">Engineering Dashboard</h1>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-700">Welcome, @userName</span>
+                                <a href="/Account/Logout" class="text-sm text-red-600 hover:text-red-800 font-medium">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Content -->
+                <main class="flex-1 overflow-y-auto bg-gray-50">
+                    <div class="p-4 sm:p-6">
+                        @Body
+                    </div>
+                </main>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- Full width layout for unauthenticated users -->
+        <div class="w-full">
+            <!-- Simple top bar for unauthenticated users -->
+            <div class="bg-white shadow-sm border-b border-gray-200">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <h1 class="text-xl font-semibold text-gray-900">Engineering Dashboard</h1>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="/Account/Login" class="text-sm text-blue-600 hover:text-blue-800">Login</a>
+                            <a href="/Account/Register" class="text-sm text-blue-600 hover:text-blue-800">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <main class="py-6">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    @Body
+                </div>
+            </main>
+        </div>
+    }
+</div>
+
+<!-- Error UI -->
+<div id="blazor-error-ui" class="fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg hidden">
+    <div class="flex items-center justify-between">
+        <span>An unhandled error has occurred.</span>
+        <div class="ml-4 space-x-2">
+            <a href="." class="underline hover:no-underline">Reload</a>
+            <button class="text-white hover:text-gray-200" onclick="document.getElementById('blazor-error-ui').style.display='none'">✕</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private bool? isAuthenticated = null;
+    private string? userName = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            isAuthenticated = authState.User.Identity?.IsAuthenticated ?? false;
+            userName = authState.User.Identity?.Name;
+        }
+        catch (Exception)
+        {
+            isAuthenticated = false;
+        }
+    }
+}
